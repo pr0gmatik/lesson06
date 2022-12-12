@@ -1,7 +1,12 @@
-﻿Console.Write("Введите числа через пробел: ");
+﻿//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+//0, 7, 8, -2, -2 -> 2
+//1, -7, 567, 89, 223-> 3
+
+Console.Write("Введите числа через пробел: ");
 int[] numbers = NumUser(Console.ReadLine());
 PrintArray(numbers);
 int sum = 0;
+
 for (int i = 0; i < numbers.Length; i++)
 {
     if (numbers[i] > 0)
@@ -10,9 +15,11 @@ for (int i = 0; i < numbers.Length; i++)
     }
 }
 Console.WriteLine();
-Console.WriteLine($"количество значений больше 0 = {sum}");
+Console.WriteLine($"количество чисел больше 0 = {sum}");
 
-int[] NumUser(string input)
+//int[] NumUser(string input)
+int[] NumUser (string input)
+
 {
     int count = 1;
     for (int i = 0; i < input.Length; i++)
@@ -30,7 +37,7 @@ int[] NumUser(string input)
     {
         string temp = "";
 
-       while (input[i] != ' ')
+        while (input[i] != ' ')
         {
             if (i != input.Length - 1)
             {
